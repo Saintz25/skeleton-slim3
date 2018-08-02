@@ -1,10 +1,5 @@
 <?php
-/**
- * Bootstrap file
- *
- * @author Brian Vanegas Parra @braian125
- * @link https://github.com/braian125/s3-skeleton
- */
+
 ini_set('session.cookie_httponly', 1);
 session_name('app_session');
 session_start();
@@ -20,9 +15,9 @@ if(file_exists( __DIR__ . '/../.env' )){
 	$_ENV['APP_DISPLAYERRORDETAILS'] = "true";
 	$_ENV['DB_CONNECTION'] = "mysql";
 	$_ENV['DB_HOST'] = "localhost";
-	$_ENV['DB_DATABASE'] = "database";
+	$_ENV['DB_DATABASE'] = "bogotanear";
 	$_ENV['DB_USERNAME'] = "root";
-	$_ENV['DB_PASSWORD'] = "";
+	$_ENV['DB_PASSWORD'] = "mysql";
 	$_ENV['DB_PREFIX'] = "";
 }
 
@@ -74,7 +69,7 @@ $container['view'] = function ($container) {
 		'cache' => false,
 	]);
 	$uri = explode("/",$container['request']->getUri());
-	$basePath = $uri[0]."//".$uri[2]."/cargaproductoskubbox/public/";
+	$basePath = $uri[0]."//".$uri[2]."";
 	$view->addExtension( new \Slim\Views\TwigExtension(
 		$container->router,
 		$basePath,
