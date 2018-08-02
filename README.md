@@ -7,9 +7,6 @@ Install
 **Using Composer**
 >composer create-project gosoft/s3-skeleton=dev-master
 
-**Github**
->git clone https://github.com/braian125/s3-skeleton.git
-
 Run it
 -------------
 
@@ -61,11 +58,3 @@ Command Line
 >php skeleton migrate
 >
 >php skeleton rollback
-
-
-
-About us
---------
->**[@braian125](https://twitter.com/braian125)**
->
->**[@julianhm9612](https://twitter.com/julianhm9612)**
